@@ -1,8 +1,24 @@
 # RHMAP-BPM-Integration-Sync
 
 ## RHMAP-BPM-Integration Using Sync
-To make a mobile app getting regular updates on changes made in tasks and processes in Red Hat JBoss BPM,
-the `$fh.sync` framework can be used together with the [fh-connector-bpm](https://github.com/sebastianfaulhaber/fh-connector-bpm).
+For mobile users that require tasks, information or status updates asynchronously without the need of explicitly requesting them, RHMAP provides the `$fh.sync` framework. This framework makes it possible to keep a mobile app in sync with data modifications on the server and vice versa. For personnel that works according to a semi-automated process where certain tasks are performed manually, such as collecting data, Red Hat JBoss BPM Suite toghether with RHMAP provides an excellent means to combine these needs.
+
+![alt text](./img/architecture.png "Architecture")
+
+### Steps
+```
+1. The Mobile App uses the sync framework to regularly check for updates to the Task Collection.
+2. The Sync Framework checks the collection for updates
+3. A callback through the $fh.sync API is made to the Cloud App
+4. The Cloud App calls the connector
+5. The connector calls BPM to retrieve the latest processes and tasks
+6. The Cloud App updates the Task Collection
+7. The sync framework propagates the updated collection and stores in the local Task Collection in the Mobile App
+
+```
+
+To make a mobile app getting regular updates on changes made in tasks and processes in Red Hat JBoss BPM Suite,
+the `$fh.sync` framework is used together with the [fh-connector-bpm](https://github.com/sebastianfaulhaber/fh-connector-bpm).
 Using the `$fh.sync.globalInterceptRequest` function a `globalRequestInterceptor` that calls the connector on each sync cycle and then stores the result in a MongoDB Collection allows the mobile app to asynchronously retrieve the latest BPM process and task updates and present these to the user.
 
 ![alt text](./img/cardswithtasks.png "Cards with tasks")
