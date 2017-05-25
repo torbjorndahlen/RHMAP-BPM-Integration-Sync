@@ -17,12 +17,14 @@ For mobile users that require tasks, information or status updates asynchronousl
 
 ```
 ### Mobile App Displaying Tasks from BPM
-Task data retrieved from BPM by the Mobile App can be displayed for example as cards:
+Task data retrieved from BPM by the Mobile App can be displayed for example as cards.
+The end user can interact with BPM through the Mobile App by releasing, starting or completing tasks.
 
 ![alt text](./img/cardswithtasks.png "Cards with tasks")
 
 ### Mobile App Displaying an in queue with Tasks from BPM
-The Mobile App can display an in queue that gets updated when BPM creates new tasks:
+The Mobile App can display an in queue that gets updated when BPM creates new tasks.
+A team of users can use BPM's claim function through the Mobile App to reserve a task to work on.
 
 ![alt text](./img/myteamstasks.png "List with tasks")
 
