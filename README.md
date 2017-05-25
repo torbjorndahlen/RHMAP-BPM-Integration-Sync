@@ -4,6 +4,12 @@
 To make a mobile app getting regular updates on changes made in tasks and processes in Red Hat JBoss BPM,
 the `$fh.sync` framework can be used together with the [fh-connector-bpm](https://github.com/sebastianfaulhaber/fh-connector-bpm).
 Using the `$fh.sync.globalInterceptRequest` function a `globalRequestInterceptor` that calls the connector on each sync cycle and then stores the result in a MongoDB Collection allows the mobile app to asynchronously retrieve the latest BPM process and task updates and present these to the user.
+
+![alt text](./img/cardswithtasks.png "Cards with tasks")
+
+![alt text](./img/myteamstasks.png "List with tasks")
+
+
 The following code example shows the `globalRequestInterceptor` in the Cloud App:
 
 ```
