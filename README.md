@@ -16,7 +16,13 @@ For mobile users that require tasks, information or status updates asynchronousl
 7. The sync framework propagates the updated collection and stores in the local Task Collection in the Mobile App
 
 ```
+### Mobile App Displaying Tasks from BPM
+Task data retrieved from BPM by the Mobile App can be displayed for example as cards:
+
 ![alt text](./img/cardswithtasks.png "Cards with tasks")
+
+### Mobile App Displaying an in queue with Tasks from BPM
+The Mobile App can display an in queue that gets updated when BPM creates new tasks:
 
 ![alt text](./img/myteamstasks.png "List with tasks")
 
