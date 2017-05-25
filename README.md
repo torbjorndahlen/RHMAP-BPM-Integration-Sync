@@ -121,5 +121,7 @@ $fh.sync.notify(function(notification) {
     );
 });
 ```
-By using $scope.$apply the mobile app's UI can be updated asynchronously every time there is a change in BPM's processes or tasks.
-This is a simple way of building a process driven, asynchronous mobile app that can be used to push tasks to for example field personnel, call center staff etc.
+The mobile app's UI can be updated asynchronously every time there is a change in BPM's processes or tasks by using for example `$scope.$apply` in AngularJS. This will make tasks display their updated information with no need for the user to
+explicitly request an update. This makes it convenient when working with multiple tasks simultaneously or while
+infrequently receiving new tasks to an in queue.
+Red Hat MAP together with Red Hat JBoss BPM Suite, leveraging the sync framework provide a simple way of building a process driven, asynchronous mobile apps that can be used mobile personnel.
